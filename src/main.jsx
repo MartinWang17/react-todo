@@ -8,3 +8,13 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+/* 
+for my own reference, this is what the code is doing: 
+const root = createRoot(document.getElementById('root'))
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+*/
