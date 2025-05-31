@@ -1,5 +1,6 @@
 import TodoItem from "./todo-item.jsx"
 import { useState } from "react"
+import "./App.css"
 
 function App() {
   const [todos, setTodos] = useState([
@@ -7,18 +8,19 @@ function App() {
     "Build a project",
     "Earn an internship",
   ]);
-  const [input, setInput] = useState("");
+  
+  const [input, setInput] = useState("")
 
   function handleAddTodo() {
-    if (input.trim() === "") return; // Prevent adding empty todos
-    setTodos([...todos, input]);
-    setInput(""); // Clear input field after adding
+    if (input.trim() === "") return; //prevents adding empty todos
+    setTodos([...todos, input]); 
+    setInput("") //clear input field after adding
   }
 
   return (
     <div>
       <h1>To-Do List</h1>
-      <input 
+      <input
         value={input}
         onChange={e => setInput(e.target.value)}
         placeholder="Add a new todo"
@@ -31,6 +33,7 @@ function App() {
       </ul>
     </div>
   );
+  
 }
 
 export default App;
